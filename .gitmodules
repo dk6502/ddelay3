@@ -1,0 +1,6 @@
+[submodule "JUCE"]
+	path = JUCE
+	url = https://github.com/juce-framework/JUCE
+[submodule "dkdsp"]
+	path = dkdsp
+	url = https://github.com/dkx64/dkdsp
