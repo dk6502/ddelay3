@@ -8,8 +8,8 @@
 #include "juce_events/juce_events.h"
 #include "juce_graphics/juce_graphics.h"
 #include "juce_gui_basics/juce_gui_basics.h"
-#include <juce_audio_processors/juce_audio_processors.h>
 #include <memory>
+#include <juce_audio_processors/juce_audio_processors.h>
 
 class AudioPluginAudioProcessorEditor;
 
@@ -183,7 +183,7 @@ public:
     setSize(400, 200);
 
     title.setText("DDelay 3", juce::dontSendNotification);
-    title.setBounds(150, 20, 100, 50);
+    title.setBounds(150, 20, 100, 25);
     title.setJustificationType(juce::Justification::centred);
     addAndMakeVisible(title);
 
@@ -194,9 +194,9 @@ public:
     feedbackSlider.setSliderStyle(
         juce::Slider::SliderStyle::RotaryHorizontalDrag);
     feedbackSlider.setTextBoxStyle(juce::Slider::NoTextBox, false, 0, 0);
-    feedbackSlider.setBounds(knobSize - 80, 30, knobSize, knobSize);
+    feedbackSlider.setBounds(knobSize - 80, 10, knobSize, knobSize);
     feedbackLabel.setText("Feedback", juce::NotificationType::sendNotification);
-    feedbackLabel.setBounds(knobSize - 80, 30 + knobSize, knobSize,
+    feedbackLabel.setBounds(knobSize - 80, 10 + knobSize, knobSize,
                             knobSize / 4);
     feedbackLabel.setJustificationType(juce::Justification::centred);
     addAndMakeVisible(feedbackLabel);
@@ -207,9 +207,9 @@ public:
                                                                  timeSlider));
     timeSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryHorizontalDrag);
     timeSlider.setTextBoxStyle(juce::Slider::NoTextBox, false, 0, 0);
-    timeSlider.setBounds(getWidth() - knobSize - 20, 30, knobSize, knobSize);
+    timeSlider.setBounds(getWidth() - knobSize - 20, 10, knobSize, knobSize);
     timeLabel.setText("Time", juce::dontSendNotification);
-    timeLabel.setBounds(getWidth() - knobSize - 20, 30 + knobSize, knobSize,
+    timeLabel.setBounds(getWidth() - knobSize - 20, 10 + knobSize, knobSize,
                         knobSize / 4);
     timeLabel.setJustificationType(juce::Justification::centred);
     addAndMakeVisible(timeLabel);
