@@ -11,6 +11,8 @@
 #include <memory>
 #include <juce_audio_processors/juce_audio_processors.h>
 
+
+
 class AudioPluginAudioProcessorEditor;
 
 class AudioPluginAudioProcessor final : public juce::AudioProcessor {
@@ -95,6 +97,7 @@ public:
   }
 
   // This is where the larger DSP logic goes, where effects are put together
+
 
   void prepareToPlay(double sampleRate, int samplesPerBlock) override {
     juce::ignoreUnused(sampleRate, samplesPerBlock);
